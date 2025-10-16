@@ -1,0 +1,41 @@
+{
+  "learned_count": 58,
+  "categories": {
+    "Số học": {
+      "total": 23,
+      "success": 19,
+      "rate": 82.6087,
+      "examples": ["2+3", "5*6", "10-4", "20/5", "2+3*4"]
+    },
+    "Phương trình bậc 1": {
+      "total": 5,
+      "success": 5,
+      "rate": 100,
+      "examples": ["x+5=0", "2x-10=0", "3x+9=0", "5x=20", "x/2=5"]
+    },
+    "Phương trình bậc 2": {
+      "total": 6,
+      "success": 6,
+      "rate": 100,
+      "examples": ["x^2-4=0", "x^2-5x+6=0", "x^2+2x+1=0", "x^2-9=0", "2x^2-8=0"]
+    },
+    "Lượng giác": {
+      "total": 12,
+      "success": 12,
+      "rate": 100,
+      "examples": ["sin(0)", "sin(30)", "sin(45)", "sin(60)", "sin(90)"]
+    },
+    "Logarit": {
+      "total": 6,
+      "success": 6,
+      "rate": 100,
+      "examples": ["log(10)", "log(100)", "log(1000)", "ln(e)", "ln(1)"]
+    },
+    "Lũy thừa": {
+      "total": 6,
+      "success": 6,
+      "rate": 100,
+      "examples": ["2^3", "2^8", "3^3", "5^2", "10^3"]
+    }
+  }
+}

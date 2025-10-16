@@ -1,0 +1,21 @@
+problem,answer,category
+2+3*4,14,arithmetic
+5*6-10,20,arithmetic
+x^2-5x+6=0,"x1=3, x2=2",quadratic
+3x+9=0,x=-3,linear
+sin(30),0.5,trigonometry
+log(100),2,logarithm
+2^8,256,power
+sqrt(16)+3,7,arithmetic
+x^2-4=0,"x1=2, x2=-2",quadratic
+cos(60),0.5,trigonometry
+
+problem
+2+3*4
+5*6-10
+x^2-5x+6=0
+3x+9=0
+sin(30)
+log(100)
+2^8
+sqrt(16)+3
