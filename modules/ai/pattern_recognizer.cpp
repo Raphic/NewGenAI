@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
+#include <limits>   // Thêm header này cho numeric_limits
 #include <map>
 #include <vector>
 #include <cctype>
@@ -186,110 +187,71 @@ double PatternRecognizer::calculateSimilarity(const std::string& p1,
     return score;
 }
 
-std::string PatternRecognizer::categoryToString(MathCategory cat) const {
-    switch (cat) {
-        case MathCategory::ARITHMETIC: return "Số học";
-        case MathCategory::ALGEBRA_LINEAR: return "Phương trình bậc 1";
-        case MathCategory::ALGEBRA_QUADRATIC: return "Phương trình bậc 2";
-        case MathCategory::TRIGONOMETRY: return "Lượng giác";
-        case MathCategory::LOGARITHM: return "Logarit";
-        case MathCategory::POWER: return "Lũy thừa";
-        case MathCategory::MIXED: return "Hỗn hợp";
-        default: return "Chưa xác định";
+// Lưu / tải kiến thức đã học (định dạng đơn giản: "<success:int> <quoted input>\n")
+bool PatternRecognizer::saveKnowledge(const std::string& path) const {
+    std::ofstream ofs(path);
+    if (!ofs) return false;
+    for (const auto& p : learnedProblems_) {
+        ofs << (p.success ? 1 : 0) << ' ' << std::quoted(p.input) << '\n';
+        if (!ofs) return false;
     }
-}
-
-// ==================== LƯU & TẢI KIẾN THỨC ====================
-bool PatternRecognizer::saveKnowledge(const std::string& file) const {
-    std::ofstream out(file);
-    if (!out.is_open()) {
-        std::cerr << "❌ Không thể lưu: " << file << "\n";
-        return false;
-    }
-
-    out << "{\n  \"learned_count\": " << learnedProblems_.size() << ",\n";
-    out << "  \"categories\": {\n";
-    bool first = true;
-
-    for (const auto& [cat, s] : stats_) {
-        if (!first) out << ",\n";
-        first = false;
-
-        out << "    \"" << categoryToString(cat) << "\": {\n";
-        out << "      \"total\": " << s.totalCount << ",\n";
-        out << "      \"success\": " << s.successCount << ",\n";
-        out << "      \"rate\": " << s.successRate << ",\n";
-        out << "      \"examples\": [";
-
-        for (size_t i = 0; i < s.examples.size(); ++i) {
-            if (i > 0) out << ", ";
-            out << "\"" << s.examples[i] << "\"";
-        }
-
-        out << "]\n    }";
-    }
-
-    out << "\n  }\n}\n";
-    out.close();
-    std::cout << "💾 Đã lưu kiến thức AI vào: " << file << "\n";
     return true;
 }
 
-bool PatternRecognizer::loadKnowledge(const std::string& file) {
-    std::ifstream in(file);
-    if (!in.is_open()) return false;
-
-    stats_.clear();
-    std::string line, catName;
-    CategoryStats current{};
-    bool inCat = false;
-
-    while (std::getline(in, line)) {
-        line.erase(0, line.find_first_not_of(" \t"));
-
-        if (line.find("\"") != std::string::npos && line.find(": {") != std::string::npos) {
-            if (inCat && !catName.empty())
-                stats_[stringToCategory(catName)] = current;
-
-            size_t start = line.find("\"") + 1;
-            size_t end = line.find("\"", start);
-            catName = line.substr(start, end - start);
-            current = CategoryStats{0, 0, 0.0, {}};
-            inCat = true;
-        }
-
-        if (line.find("\"total\":") != std::string::npos)
-            current.totalCount = std::stoi(line.substr(line.find(":") + 1));
-
-        if (line.find("\"success\":") != std::string::npos)
-            current.successCount = std::stoi(line.substr(line.find(":") + 1));
-
-        if (line.find("\"rate\":") != std::string::npos)
-            current.successRate = std::stod(line.substr(line.find(":") + 1));
+bool PatternRecognizer::loadKnowledge(const std::string& path) {
+    std::ifstream ifs(path);
+    if (!ifs) return false;
+    std::vector<MathProblem> loaded;
+    while (ifs) {
+        int ok = 0;
+        std::string input;
+        ifs >> ok;
+        if (!ifs) break;
+        ifs >> std::ws;
+        ifs >> std::quoted(input);
+        if (!ifs) break;
+        MathProblem mp;
+        mp.input = input;
+        mp.success = (ok != 0);
+        loaded.push_back(mp);
+        // consume rest of line if any
+        ifs.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
-
-    if (inCat && !catName.empty())
-        stats_[stringToCategory(catName)] = current;
-
-    in.close();
-    if (!stats_.empty()) {
-        std::cout << "📂 Đã tải kiến thức AI từ: " << file << "\n";
-        std::cout << "   Dạng toán: " << stats_.size() << "\n";
-        return true;
-    }
-    return false;
+    if (loaded.empty()) return false;
+    learnFromHistory(loaded);
+    return true;
 }
 
-// ==================== CHUYỂN STRING → CATEGORY ====================
-MathCategory PatternRecognizer::stringToCategory(const std::string& s) const {
-    if (s == "Số học") return MathCategory::ARITHMETIC;
-    if (s == "Phương trình bậc 1") return MathCategory::ALGEBRA_LINEAR;
-    if (s == "Phương trình bậc 2") return MathCategory::ALGEBRA_QUADRATIC;
-    if (s == "Lượng giác") return MathCategory::TRIGONOMETRY;
-    if (s == "Logarit") return MathCategory::LOGARITHM;
-    if (s == "Lũy thừa") return MathCategory::POWER;
-    if (s == "Hỗn hợp") return MathCategory::MIXED;
+// Canonical mapping table (sửa ở đây khi thêm/xoá dạng)
+static const std::vector<std::pair<MathCategory, const char*>> kCategoryMap = {
+    { MathCategory::ARITHMETIC,        "Số học" },
+    { MathCategory::ALGEBRA_LINEAR,    "Phương trình bậc 1" },
+    { MathCategory::ALGEBRA_QUADRATIC, "Phương trình bậc 2" },
+    { MathCategory::TRIGONOMETRY,      "Lượng giác" },
+    { MathCategory::LOGARITHM,         "Logarit" },
+    { MathCategory::POWER,             "Lũy thừa" },
+    { MathCategory::MIXED,             "Hỗn hợp" }
+};
+
+// Enum -> string: dùng bảng chung
+std::string PatternRecognizer::categoryToString(MathCategory cat) const {
+    for (const auto& p : kCategoryMap) {
+        if (p.first == cat) return std::string(p.second);
+    }
+    return "Chưa xác định";
+}
+
+// String -> enum: dùng bảng chung
+MathCategory stringToCategory(const std::string& str) {
+    for (const auto& p : kCategoryMap) {
+        if (str == p.second) return p.first;
+    }
     return MathCategory::UNKNOWN;
+}
+
+// Member delegating (giữ nếu header còn khai báo thành viên)
+MathCategory PatternRecognizer::stringToCategory(const std::string& s) const {
+    return ::ai::stringToCategory(s);
 }
 
 bool PatternRecognizer::hasKnowledge() const {

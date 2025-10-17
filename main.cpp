@@ -28,6 +28,15 @@ std::string getVersion() {
     return "0.0";
 }
 
+// Thêm helper trim an toàn
+static inline void trimString(std::string &s) {
+    const char* ws = " \t\n\r\f\v";
+    size_t start = s.find_first_not_of(ws);
+    if (start == std::string::npos) { s.clear(); return; }
+    size_t end = s.find_last_not_of(ws);
+    s = s.substr(start, end - start + 1);
+}
+
 int main() {
     utils::setConsoleUTF8();
 
@@ -178,9 +187,8 @@ int main() {
         std::string input;
         std::getline(std::cin, input);
 
-        // Trim spaces
-        input.erase(0, input.find_first_not_of(" \t"));
-        input.erase(input.find_last_not_of(" \t") + 1);
+        // Trim spaces (dùng helper an toàn)
+        trimString(input);
 
         if (input.empty()) continue;
 

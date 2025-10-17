@@ -56,3 +56,17 @@
 {"input":"11 + 41 = 50 + 9 = ; 22 + 16 = 31 + 15 = ; 40 + 18 = 63 + 5 = ; 38 + 11 = 44 + 6 = ; 27 + 21 = 21 + 30 =","type":"system_equation","result":"Chức năng hệ PT đang phát triển","success":false,"timestamp":1760517103}
 {"input":"leanip","type":"error","result":"Hàm không hợp lệ: leanip","success":false,"timestamp":1760517369}
 {"input":"learn","type":"error","result":"Hàm không hợp lệ: learn","success":false,"timestamp":1760600875}
+{"input":"claean","type":"error","result":"Hàm không hợp lệ: claean","success":false,"timestamp":1760619661}
+{"input":"healp","type":"error","result":"Hàm không hợp lệ: healp","success":false,"timestamp":1760620516}
+{"input":"ádas","type":"error","result":"Thiếu số","success":false,"timestamp":1760621359}
+{"input":"amalyze","type":"error","result":"Hàm không hợp lệ: amalyze","success":false,"timestamp":1760621383}
+{"input":"23123-123123213=1231231","type":"expression","result":"-123100090.000000","success":true,"timestamp":1760621429}
+{"input":"23123=21321","type":"expression","result":"23123.000000","success":true,"timestamp":1760622021}
+{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623473}
+{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623515}
+{"input":"clear","type":"error","result":"Hàm không hợp lệ: clear","success":false,"timestamp":1760623520}
+{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623536}
+{"input":"1212+x=212","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760623541}
+{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623555}
+{"input":"x^2+3x-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760624312}
+{"input":"sqrt(16)","type":"expression","result":"4.000000","success":true,"timestamp":1760624321}

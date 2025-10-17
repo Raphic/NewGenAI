@@ -1,32 +1,35 @@
-NewGen/                          ← GIỮ NGUYÊN
-├── main.cpp                     ← GIỮ NGUYÊN (sửa một chút)
+NewGen/
+├── main.cpp                   # Entry point, command handling
+│
 ├── modules/
+│   ├── ai/
+│   │   ├── ai_trainer.h/cpp          # AI training management
+│   │   ├── data_cleaner.h/cpp        # Data cleanup utilities
+│   │   ├── data_exporter.h/cpp       # Export data to CSV
+│   │   ├── data_importer.h/cpp       # Import training data
+│   │   ├── math_logger.h/cpp         # Math history logging
+│   │   ├── pattern_recognizer.h/cpp  # Math pattern classification
+│   │   ├── storage_json.h/cpp        # JSON data persistence
+│   │   └── story_parser.h/cpp        # Story parsing (new)
+│   │
 │   ├── math/
-│   │   ├── calculator.cpp       ← GIỮ NGUYÊN 100%
-│   │   ├── calculator.h         ← GIỮ NGUYÊN 100%
-│   │   └── statistics.cpp
+│   │   └── calculator.h/cpp          # Math expression processing
 │   │
-│   ├── ai/                      ← THÊM MỚI (từ từ)
-│   │   ├── math_logger.cpp      ← Bắt đầu từ đây (Phase 1)
-│   │   ├── math_logger.h
-│   │   ├── pattern_recognizer.cpp   ← Phase 2
-│   │   ├── pattern_recognizer.h
-│   │   └── (các file khác sau...)
-│   │
-│   ├── language/                ← THÊM MỚI (Phase 3)
-│   │   ├── vietnamese_parser.cpp
-│   │   └── vietnamese_parser.h
+│   ├── system/
+│   │   ├── command_handler.h/cpp     # Command processing
+│   │   └── command_registry.h/cpp    # Command registration
 │   │
 │   └── utils/
-│       ├── common.cpp           ← GIỮ NGUYÊN
-│       └── common.h             ← GIỮ NGUYÊN
+│       └── common.h/cpp              # Common utilities
 │
 ├── data/
-│   ├── version.txt              ← GIỮ NGUYÊN
-│   ├── config.json              ← GIỮ NGUYÊN
-│   └── math_history.json        ← THÊM MỚI (Phase 1)
+│   ├── version.txt                   # Version info
+│   ├── math_history.json            # Math learning history
+│   ├── knowledge/                   # AI knowledge base
+│   └── export/                      # Export directory
 │
-└── build/                       ← GIỮ NGUYÊN
+└── batch/
+    └── build_modules.bat            # Build script
 
 
 1. Sơ đồ ASCII (toàn cảnh)
