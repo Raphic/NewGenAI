@@ -1,3 +1,4 @@
+
 @echo off
 chcp 65001 >nul
 
@@ -18,6 +19,7 @@ set "mode=%1"
 
 :: ==================== VERSION MANAGER ====================
 set "version_file=data\version.txt"
+set "log_file=data\build_log.txt"
 
 :: Tạo file version nếu chưa có
 if not exist data mkdir data
@@ -50,6 +52,12 @@ set "minor=0"
 set "new_version=%major%.%minor%"
 echo %new_version% > "%version_file%"
 
+:: Log thời gian bắt đầu
+set "start_time=%time%"
+if exist "%log_file%" del "%log_file%"
+echo ==== BUILD LOG ==== > "%log_file%"
+echo Bắt đầu: %start_time% >> "%log_file%"
+
 echo ================================================
 echo 🔁 BUILD MODULAR AI SYSTEM - CLEAN BUILD
 echo 📦 Version: v%new_version%
@@ -62,28 +70,52 @@ if exist build (
 )
 if exist modular_ai.exe (
     echo 🗑️  Đang xoá modular_ai.exe cũ...
-    
     :: Đóng chương trình cũ nếu đang chạy
     taskkill /F /FI "IMAGENAME eq modular_ai.exe" /T >nul 2>&1
     timeout /t 1 /nobreak >nul
-    
     del /f /q modular_ai.exe
 )
 
 mkdir build
 
+set /a success=0
+set /a fail=0
+
 echo 🔨 Compile tất cả module...
 for /R modules %%F in (*.cpp) do (
-    echo ⚙️  Compile: %%~nxF
+    echo ⚙️  Compile: %%~nxF >> "%log_file%"
     g++ -c "%%F" -o "build\%%~nF.o"
     if !errorlevel! neq 0 (
-        echo ❌ Lỗi compile: %%~nxF
-        color 0e
-        goto :interactive_menu
+        echo ❌ Lỗi compile: %%~nxF >> "%log_file%"
+        set /a fail+=1
+    ) else (
+        echo ✅ Thành công: %%~nxF >> "%log_file%"
+        set /a success+=1
     )
 )
 
-echo ✅ Tất cả module compile OK!
+:: Log thời gian kết thúc
+set "end_time=%time%"
+echo Kết thúc: %end_time% >> "%log_file%"
+
+echo ============================== >> "%log_file%"
+echo Thành công: !success! >> "%log_file%"
+echo Lỗi: !fail! >> "%log_file%"
+
+:: Hiển thị toàn bộ log ra màn hình
+echo.
+echo ====== BUILD LOG TRÊN MÀN HÌNH ======
+type "%log_file%"
+echo.
+
+:: Hiển thị báo lỗi riêng nếu có
+if !fail! gtr 0 (
+    echo ===== DANH SÁCH FILE LỖI =====
+    findstr /C:"❌ Lỗi compile:" "%log_file%"
+) else (
+    echo ✅ Build thành công tất cả module!
+)
+
 goto :link_and_run
 
 :: ==================== INCREMENTAL BUILD ====================
@@ -253,17 +285,8 @@ color 0e
 
 :: ==================== INTERACTIVE MENU ====================
 :interactive_menu
-echo.
-echo ================================================
-echo 💬 MENU - Gõ lệnh để tiếp tục:
-echo ================================================
-echo   update  - Update build (compile file thay đổi)
-echo   rebuild - Full rebuild (xóa và build lại)
-echo   run     - Chạy chương trình
-echo   clear   - Xóa màn hình
-echo   exit    - Thoát
-echo ================================================
-echo.
+call :show_menu
+
 
 :: ==================== WAIT FOR COMMAND ====================
 :wait_for_command
@@ -301,16 +324,7 @@ if /i "%cmd%"=="clear" (
     cls
     color 0e
     title 🔧 MODULAR AI BUILD SYSTEM
-    echo ================================================
-    echo 💬 MENU - Gõ lệnh để tiếp tục:
-    echo ================================================
-    echo   update  - Update build (compile file thay đổi)
-    echo   rebuild - Full rebuild (xóa và build lại)
-    echo   run     - Chạy chương trình
-    echo   clear   - Xóa màn hình
-    echo   exit    - Thoát
-    echo ================================================
-    echo.
+    call :show_menu
     goto :wait_for_command
 )
 
@@ -326,4 +340,19 @@ if /i "%cmd%"=="exit" (
 :: Lệnh không hợp lệ
 echo.
 echo ❌ Lệnh không hợp lệ: "%cmd%"
+call :show_menu
 goto :wait_for_command
+
+:show_menu
+echo.
+echo ================================================
+echo 💬 MENU - Gõ lệnh để tiếp tục:
+echo ================================================
+echo   update  - Update build (compile file thay đổi)
+echo   rebuild - Full rebuild (xóa và build lại)
+echo   run     - Chạy chương trình
+echo   clear   - Xóa màn hình
+echo   exit    - Thoát
+echo ================================================
+echo.
+exit /b

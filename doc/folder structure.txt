@@ -77,7 +77,7 @@ NewGen/
   data/math_history.json   ──> SQLite / PostgreSQL   ──> REST / gRPC / Sync
    (small) (JSONL)              (medium) (structured)      (large, multi-node)
 
-
+=============================================================================================
 Phase 1 — Logging + JSON (Đã xong)
 Module: MathLogger (JSONL data/math_history.json)
 Workload: nhẹ, CPU, file I/O
@@ -113,3 +113,13 @@ Phase 6 — Distributed / Networked Learning
 Module: network layer + sync logic + DB server
 Workload: multi-node, cloud, có thể cần GPU cluster
 Goal: Share knowledge across instances, federated updates, centralized DB, REST / gRPC API.
+
+=============================================================================================
+Đề xuất phát triển batch build của bạn với 6 mục theo thứ tự:
+
+Giao diện báo lỗi, log, thời gian build
+Tự động backup trước khi build
+Kiểm tra môi trường build
+Quản lý version nâng cao, rollback
+Build từng module theo tham số
+Quản lý dependency thủ công (theo include)

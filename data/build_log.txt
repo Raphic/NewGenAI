@@ -1,0 +1,30 @@
+==== BUILD LOG ==== 
+Bắt đầu: 13:54:26,73 
+⚙️  Compile: ai_trainer.cpp 
+✅ Thành công: ai_trainer.cpp 
+⚙️  Compile: data_cleaner.cpp 
+✅ Thành công: data_cleaner.cpp 
+⚙️  Compile: data_exporter.cpp 
+✅ Thành công: data_exporter.cpp 
+⚙️  Compile: data_importer.cpp 
+✅ Thành công: data_importer.cpp 
+⚙️  Compile: math_logger.cpp 
+✅ Thành công: math_logger.cpp 
+⚙️  Compile: pattern_recognizer.cpp 
+✅ Thành công: pattern_recognizer.cpp 
+⚙️  Compile: storage_json.cpp 
+✅ Thành công: storage_json.cpp 
+⚙️  Compile: calculator.cpp 
+✅ Thành công: calculator.cpp 
+⚙️  Compile: statistics.cpp 
+✅ Thành công: statistics.cpp 
+⚙️  Compile: command_handler.cpp 
+✅ Thành công: command_handler.cpp 
+⚙️  Compile: command_registry.cpp 
+✅ Thành công: command_registry.cpp 
+⚙️  Compile: common.cpp 
+✅ Thành công: common.cpp 
+Kết thúc: 13:54:36,13 
+============================== 
+Thành công: 12 
+Lỗi: 0 
