@@ -66,3 +66,10 @@
 {"input":"clear","type":"error","result":"Hàm không hợp lệ: clear","success":false,"timestamp":0}
 {"input":"1212+x=212","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
 {"input":"x^2+3x-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"ẽit","type":"error","result":"Thiếu số","success":false,"timestamp":1760684218}
+{"input":"1212-313123","type":"expression","result":"-311911.000000","success":true,"timestamp":1760685942}
+{"input":"ext","type":"error","result":"Hàm không hợp lệ: ext","success":false,"timestamp":1760686240}
+{"input":"rollb","type":"error","result":"Hàm không hợp lệ: rollb","success":false,"timestamp":1760690189}
+{"input":"build","type":"error","result":"Hàm không hợp lệ: build","success":false,"timestamp":1760707307}
+{"input":"build","type":"error","result":"Hàm không hợp lệ: build","success":false,"timestamp":1760711588}
+{"input":"build","type":"error","result":"Hàm không hợp lệ: build","success":false,"timestamp":1760712093}
