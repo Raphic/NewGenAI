@@ -1,0 +1,127 @@
+{
+    "domain": "physics",
+    "version": "1.0",
+    "description": "Kiến thức môn Vật lý",
+    "topics": [
+        {
+            "id": "physics_mechanics_newton2",
+            "domain": "physics",
+            "category": "mechanics",
+            "name": "định luật 2 newton",
+            "aliases": [
+                "dl2 newton",
+                "F=ma",
+                "newton's second law",
+                "định luật newton thứ hai"
+            ],
+            "definition": "Gia tốc của vật tỉ lệ thuận với lực tác dụng và tỉ lệ nghịch với khối lượng",
+            "formula": "F = m × a",
+            "explanation": "Định luật 2 Newton cho biết mối quan hệ định lượng giữa lực (F), khối lượng (m) và gia tốc (a). Khi có lực tác dụng lên vật, vật sẽ chuyển động với gia tốc tỉ lệ với lực và tỉ lệ nghịch với khối lượng. Đây là nền tảng của cơ học cổ điển.",
+            "examples": [
+                "Lực 10N tác dụng lên vật 2kg → a = F/m = 5 m/s²",
+                "Vật 5kg có a = 2m/s² → F = ma = 10N",
+                "Đẩy xe 100kg với lực 200N → a = 2 m/s²"
+            ],
+            "related_topics": [
+                "lực",
+                "gia tốc",
+                "định luật 1 newton",
+                "định luật 3 newton",
+                "khối lượng"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10",
+                "unit": "N (Newton)",
+                "applications": "dynamics, motion"
+            }
+        },
+        {
+            "id": "physics_mechanics_velocity",
+            "domain": "physics",
+            "category": "mechanics",
+            "name": "vận tốc",
+            "aliases": [
+                "velocity",
+                "tốc độ"
+            ],
+            "definition": "Quãng đường đi được trong một đơn vị thời gian",
+            "formula": "v = s / t",
+            "explanation": "Vận tốc là đại lượng vật lý biểu thị mức độ nhanh chậm của chuyển động. Vận tốc có hướng (vector) còn tốc độ chỉ có độ lớn (scalar). Đơn vị SI là m/s.",
+            "examples": [
+                "Đi 100m trong 20s → v = 5 m/s",
+                "Xe chạy 120km trong 2h → v = 60 km/h",
+                "Ánh sáng: v = 3×10⁸ m/s"
+            ],
+            "related_topics": [
+                "gia tốc",
+                "quãng đường",
+                "thời gian",
+                "chuyển động đều"
+            ],
+            "metadata": {
+                "difficulty": "easy",
+                "grade_level": "8",
+                "unit": "m/s, km/h"
+            }
+        },
+        {
+            "id": "physics_electricity_ohm_law",
+            "domain": "physics",
+            "category": "electricity",
+            "name": "định luật ôm",
+            "aliases": [
+                "ohm's law",
+                "ohm law",
+                "định luật ohm"
+            ],
+            "definition": "Cường độ dòng điện tỉ lệ thuận với hiệu điện thế và tỉ lệ nghịch với điện trở",
+            "formula": "I = U / R",
+            "explanation": "Định luật Ôm mô tả mối quan hệ giữa điện áp (U), cường độ dòng điện (I) và điện trở (R). Khi tăng điện áp thì dòng điện tăng, khi tăng điện trở thì dòng điện giảm.",
+            "examples": [
+                "U = 12V, R = 4Ω → I = 3A",
+                "U = 220V, R = 110Ω → I = 2A",
+                "I = 0.5A, R = 10Ω → U = 5V"
+            ],
+            "related_topics": [
+                "điện trở",
+                "hiệu điện thế",
+                "cường độ dòng điện",
+                "mạch điện"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "11",
+                "unit": "A (Ampere), V (Volt), Ω (Ohm)"
+            }
+        },
+        {
+            "id": "physics_thermodynamics_heat",
+            "domain": "physics",
+            "category": "thermodynamics",
+            "name": "nhiệt lượng",
+            "aliases": [
+                "heat",
+                "nhiệt"
+            ],
+            "definition": "Năng lượng truyền từ vật có nhiệt độ cao sang vật có nhiệt độ thấp",
+            "formula": "Q = m × c × Δt",
+            "explanation": "Nhiệt lượng là lượng năng lượng vật thu vào hoặc tỏa ra khi có sự thay đổi nhiệt độ. Q phụ thuộc vào khối lượng (m), nhiệt dung riêng (c) và độ thay đổi nhiệt độ (Δt).",
+            "examples": [
+                "Đun 1kg nước từ 20°C lên 100°C: Q = 1 × 4200 × 80 = 336000 J",
+                "m = 2kg, c = 500 J/kg.K, Δt = 10K → Q = 10000 J"
+            ],
+            "related_topics": [
+                "nhiệt độ",
+                "nhiệt dung riêng",
+                "nhiệt nóng chảy",
+                "nhiệt hóa hơi"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10",
+                "unit": "J (Joule), cal (calorie)"
+            }
+        }
+    ]
+}

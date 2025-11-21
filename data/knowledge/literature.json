@@ -1,0 +1,63 @@
+{
+    "domain": "literature",
+    "version": "1.0",
+    "description": "Kiến thức môn Ngữ văn",
+    "topics": [
+        {
+            "id": "literature_poetry_quatrain",
+            "domain": "literature",
+            "category": "poetry",
+            "name": "thơ tứ tuyệt",
+            "aliases": [
+                "tứ tuyệt",
+                "quatrain",
+                "bài thơ 4 câu"
+            ],
+            "definition": "Thể thơ gồm 4 câu 7 chữ, vần 2-4 hoặc 1-2-4",
+            "formula": "",
+            "explanation": "Tứ tuyệt là thể thơ ngắn gồm 4 câu, mỗi câu 7 chữ. Vần thường đặt ở câu 2 và 4, hoặc câu 1, 2 và 4. Đây là thể thơ phổ biến trong văn học cổ điển.",
+            "examples": [
+                "Cây cầu bắc ngang sông Áng\nVớt từ nguồn nước Thượng Du\nCó ai buông bẵng tình chàng\nCầu sầu thiếp hoá phù du mà bay (Hồ Xuân Hương)"
+            ],
+            "related_topics": [
+                "thơ lục bát",
+                "thơ đường luật",
+                "vần thơ",
+                "thanh điệu"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "9",
+                "origin": "Trung Quốc, Việt hóa"
+            }
+        },
+        {
+            "id": "literature_genre_novel",
+            "domain": "literature",
+            "category": "prose",
+            "name": "tiểu thuyết",
+            "aliases": [
+                "novel",
+                "truyện dài"
+            ],
+            "definition": "Thể loại văn xuôi có cốt truyện phức tạp, nhiều nhân vật và sự kiện",
+            "formula": "",
+            "explanation": "Tiểu thuyết là tác phẩm văn xuôi dài, có cấu trúc phức tạp với nhiều mạch truyện, nhân vật đa dạng và không gian-thời gian rộng. Phản ánh sâu sắc đời sống xã hội.",
+            "examples": [
+                "Số đỏ - Vũ Trọng Phụng",
+                "Đất rừng phương Nam - Đoàn Giỏi",
+                "Chiến tranh và Hòa bình - Lev Tolstoy"
+            ],
+            "related_topics": [
+                "truyện ngắn",
+                "kịch",
+                "văn xuôi",
+                "cốt truyện"
+            ],
+            "metadata": {
+                "difficulty": "easy",
+                "grade_level": "8"
+            }
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "domain": "math",
+    "version": "1.0",
+    "description": "Kiến thức môn Toán học",
+    "topics": [
+        {
+            "id": "math_algebra_quadratic",
+            "domain": "math",
+            "category": "algebra",
+            "name": "phương trình bậc 2",
+            "aliases": [
+                "pt bậc 2",
+                "phương trình bậc hai",
+                "quadratic equation",
+                "phương trình bậc 2 một ẩn"
+            ],
+            "definition": "Phương trình có dạng ax² + bx + c = 0 với a ≠ 0",
+            "formula": "x = (-b ± √Δ) / 2a, với Δ = b² - 4ac",
+            "explanation": "Phương trình bậc 2 là phương trình đa thức bậc cao nhất của ẩn là 2. Để giải phương trình bậc 2, ta tính delta (Δ = b² - 4ac) sau đó áp dụng công thức nghiệm. Nếu Δ > 0 thì phương trình có 2 nghiệm phân biệt, Δ = 0 có nghiệm kép, Δ < 0 vô nghiệm.",
+            "examples": [
+                "x² - 5x + 6 = 0 → Δ = 1 → x₁ = 2, x₂ = 3",
+                "2x² + 3x - 2 = 0 → Δ = 25 → x₁ = 0.5, x₂ = -2",
+                "x² + 2x + 1 = 0 → Δ = 0 → x = -1 (nghiệm kép)"
+            ],
+            "related_topics": [
+                "delta",
+                "công thức vi-et",
+                "đồ thị parabol",
+                "phương trình bậc nhất"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "9",
+                "subject_area": "algebra"
+            }
+        },
+        {
+            "id": "math_trigonometry_sin",
+            "domain": "math",
+            "category": "trigonometry",
+            "name": "hàm sin",
+            "aliases": [
+                "sin",
+                "sine",
+                "sinus"
+            ],
+            "definition": "Hàm lượng giác biểu diễn tỉ số giữa cạnh đối và cạnh huyền trong tam giác vuông",
+            "formula": "sin(α) = đối / huyền",
+            "explanation": "Trong tam giác vuông, sin của một góc bằng cạnh đối với góc đó chia cho cạnh huyền. Hàm sin có giá trị từ -1 đến 1 và là hàm tuần hoàn với chu kỳ 2π.",
+            "examples": [
+                "sin(30°) = 1/2",
+                "sin(45°) = √2/2",
+                "sin(90°) = 1",
+                "sin(0°) = 0"
+            ],
+            "related_topics": [
+                "cos",
+                "tan",
+                "tam giác vuông",
+                "lượng giác"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10",
+                "unit": "radians or degrees"
+            }
+        },
+        {
+            "id": "math_geometry_circle_area",
+            "domain": "math",
+            "category": "geometry",
+            "name": "diện tích hình tròn",
+            "aliases": [
+                "dt hình tròn",
+                "circle area",
+                "diện tích đường tròn"
+            ],
+            "definition": "Diện tích được tính bằng π nhân bình phương bán kính",
+            "formula": "S = π × r²",
+            "explanation": "Để tính diện tích hình tròn, ta lấy số π (khoảng 3.14159) nhân với bình phương bán kính. Công thức này được chứng minh từ tích phân hoặc phương pháp chia nhỏ hình tròn.",
+            "examples": [
+                "r = 5cm → S = π × 25 = 78.54 cm²",
+                "r = 10m → S = π × 100 = 314.16 m²"
+            ],
+            "related_topics": [
+                "chu vi hình tròn",
+                "bán kính",
+                "đường kính",
+                "số pi"
+            ],
+            "metadata": {
+                "difficulty": "easy",
+                "grade_level": "7",
+                "formula_type": "area"
+            }
+        },
+        {
+            "id": "math_calculus_derivative",
+            "domain": "math",
+            "category": "calculus",
+            "name": "đạo hàm",
+            "aliases": [
+                "derivative",
+                "vi phân"
+            ],
+            "definition": "Tốc độ thay đổi của hàm số tại một điểm",
+            "formula": "f'(x) = lim(h→0) [f(x+h) - f(x)] / h",
+            "explanation": "Đạo hàm đo tốc độ thay đổi tức thời của hàm số. Nó cho biết hàm số tăng hay giảm và nhanh như thế nào tại một điểm. Đạo hàm là nền tảng của giải tích và có nhiều ứng dụng trong vật lý, kinh tế.",
+            "examples": [
+                "f(x) = x² → f'(x) = 2x",
+                "f(x) = sin(x) → f'(x) = cos(x)",
+                "f(x) = e^x → f'(x) = e^x"
+            ],
+            "related_topics": [
+                "tích phân",
+                "giới hạn",
+                "hàm số"
+            ],
+            "metadata": {
+                "difficulty": "hard",
+                "grade_level": "12",
+                "requires": "limit understanding"
+            }
+        }
+    ]
+}

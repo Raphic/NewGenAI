@@ -1,0 +1,124 @@
+{
+    "domain": "chemistry",
+    "version": "1.0",
+    "description": "Kiến thức môn Hóa học",
+    "topics": [
+        {
+            "id": "chemistry_general_atom",
+            "domain": "chemistry",
+            "category": "general",
+            "name": "nguyên tử",
+            "aliases": [
+                "atom",
+                "nguyên tử học"
+            ],
+            "definition": "Đơn vị cấu tạo nhỏ nhất của nguyên tố hóa học",
+            "formula": "",
+            "explanation": "Nguyên tử gồm hạt nhân (proton và neutron) và vỏ electron. Số proton xác định nguyên tố, số electron quyết định tính chất hóa học. Khối lượng tập trung ở hạt nhân.",
+            "examples": [
+                "Hydro (H): 1 proton, 1 electron",
+                "Carbon (C): 6 proton, 6 neutron, 6 electron",
+                "Oxygen (O): 8 proton, 8 neutron, 8 electron"
+            ],
+            "related_topics": [
+                "electron",
+                "proton",
+                "neutron",
+                "nguyên tố",
+                "bảng tuần hoàn"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10"
+            }
+        },
+        {
+            "id": "chemistry_organic_alkane",
+            "domain": "chemistry",
+            "category": "organic",
+            "name": "ankan",
+            "aliases": [
+                "alkane",
+                "hidrocarbon no"
+            ],
+            "definition": "Hiđrocacbon no mạch hở có công thức tổng quát CₙH₂ₙ₊₂",
+            "formula": "CₙH₂ₙ₊₂",
+            "explanation": "Ankan là hợp chất hữu cơ chỉ chứa liên kết đơn C-C và C-H. Tính chất: không màu, ít tan trong nước, dễ cháy. Tên gọi: metan, etan, propan, butan,...",
+            "examples": [
+                "Metan: CH₄ (n=1)",
+                "Etan: C₂H₆ (n=2)",
+                "Propan: C₃H₈ (n=3)",
+                "Butan: C₄H₁₀ (n=4)"
+            ],
+            "related_topics": [
+                "anken",
+                "ankin",
+                "hidrocarbon",
+                "hóa hữu cơ"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "11",
+                "category_type": "saturated hydrocarbon"
+            }
+        },
+        {
+            "id": "chemistry_inorganic_acid_base",
+            "domain": "chemistry",
+            "category": "inorganic",
+            "name": "axit và bazơ",
+            "aliases": [
+                "acid and base",
+                "axit bazơ",
+                "tính axit tính bazơ"
+            ],
+            "definition": "Axit là chất cho proton H⁺, bazơ là chất nhận proton",
+            "formula": "pH = -log[H⁺]",
+            "explanation": "Theo Bronsted-Lowry, axit là chất cho H⁺, bazơ là chất nhận H⁺. pH đo độ axit: pH < 7 (axit), pH = 7 (trung tính), pH > 7 (bazơ).",
+            "examples": [
+                "Axit: HCl, H₂SO₄, CH₃COOH",
+                "Bazơ: NaOH, KOH, NH₃",
+                "pH axit mạnh: 1-2, pH bazơ mạnh: 13-14"
+            ],
+            "related_topics": [
+                "pH",
+                "chất chỉ thị",
+                "phản ứng trung hòa",
+                "muối"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10",
+                "measurement": "pH scale"
+            }
+        },
+        {
+            "id": "chemistry_reaction_combustion",
+            "domain": "chemistry",
+            "category": "reactions",
+            "name": "phản ứng cháy",
+            "aliases": [
+                "combustion",
+                "cháy"
+            ],
+            "definition": "Phản ứng oxi hóa mạnh giải phóng nhiệt và ánh sáng",
+            "formula": "CₓHᵧ + O₂ → CO₂ + H₂O + nhiệt",
+            "explanation": "Phản ứng cháy là phản ứng oxi hóa khử xảy ra nhanh, tỏa nhiều nhiệt và ánh sáng. Cần có chất cháy, chất oxi hóa (O₂) và nhiệt độ đốt cháy.",
+            "examples": [
+                "CH₄ + 2O₂ → CO₂ + 2H₂O",
+                "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+                "2H₂ + O₂ → 2H₂O"
+            ],
+            "related_topics": [
+                "oxi hóa khử",
+                "nhiệt hóa học",
+                "năng lượng"
+            ],
+            "metadata": {
+                "difficulty": "medium",
+                "grade_level": "10",
+                "reaction_type": "exothermic"
+            }
+        }
+    ]
+}
