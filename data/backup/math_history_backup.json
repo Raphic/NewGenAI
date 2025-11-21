@@ -1,72 +1,85 @@
-{"input":"2+3","type":"expression","result":"5.000000","success":true,"timestamp":1760517103}
-{"input":"5*6","type":"expression","result":"30.000000","success":true,"timestamp":1760517103}
-{"input":"10-4","type":"expression","result":"6.000000","success":true,"timestamp":1760517103}
-{"input":"20/5","type":"expression","result":"4.000000","success":true,"timestamp":1760517103}
-{"input":"2+3*4","type":"expression","result":"14.000000","success":true,"timestamp":1760517103}
-{"input":"(5+3)*2","type":"expression","result":"16.000000","success":true,"timestamp":1760517103}
-{"input":"10/2+3","type":"expression","result":"8.000000","success":true,"timestamp":1760517103}
-{"input":"2^3","type":"expression","result":"8.000000","success":true,"timestamp":1760517103}
-{"input":"2^8","type":"expression","result":"256.000000","success":true,"timestamp":1760517103}
-{"input":"3^3","type":"expression","result":"27.000000","success":true,"timestamp":1760517103}
-{"input":"5^2","type":"expression","result":"25.000000","success":true,"timestamp":1760517103}
-{"input":"10^3","type":"expression","result":"1000.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(4)","type":"expression","result":"2.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(16)","type":"expression","result":"4.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(25)","type":"expression","result":"5.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(100)","type":"expression","result":"10.000000","success":true,"timestamp":1760517103}
-{"input":"sin(0)","type":"expression","result":"0.000000","success":true,"timestamp":1760517103}
-{"input":"sin(30)","type":"expression","result":"0.500000","success":true,"timestamp":1760517103}
-{"input":"sin(45)","type":"expression","result":"0.707107","success":true,"timestamp":1760517103}
-{"input":"sin(60)","type":"expression","result":"0.866025","success":true,"timestamp":1760517103}
-{"input":"sin(90)","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"cos(0)","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"cos(30)","type":"expression","result":"0.866025","success":true,"timestamp":1760517103}
-{"input":"cos(45)","type":"expression","result":"0.707107","success":true,"timestamp":1760517103}
-{"input":"cos(60)","type":"expression","result":"0.500000","success":true,"timestamp":1760517103}
-{"input":"cos(90)","type":"expression","result":"0.000000","success":true,"timestamp":1760517103}
-{"input":"log(10)","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"log(100)","type":"expression","result":"2.000000","success":true,"timestamp":1760517103}
-{"input":"log(1000)","type":"expression","result":"3.000000","success":true,"timestamp":1760517103}
-{"input":"ln(e)","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"ln(1)","type":"expression","result":"0.000000","success":true,"timestamp":1760517103}
-{"input":"x+5=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760517103}
-{"input":"2x-10=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760517103}
-{"input":"3x+9=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760517103}
-{"input":"5x=20","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760517103}
-{"input":"x/2=5","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760517103}
-{"input":"x^2-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760517103}
-{"input":"x^2-5x+6=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760517103}
-{"input":"x^2+2x+1=0","type":"quadratic_equation","result":"Nghiệm kép","success":true,"timestamp":1760517103}
-{"input":"x^2-9=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760517103}
-{"input":"2x^2-8=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760517103}
-{"input":"x^2-10x+25=0","type":"quadratic_equation","result":"Nghiệm kép","success":true,"timestamp":1760517103}
-{"input":"sin(30)+cos(60)","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(16)+log(100)","type":"expression","result":"6.000000","success":true,"timestamp":1760517103}
-{"input":"2^3+3^2","type":"expression","result":"17.000000","success":true,"timestamp":1760517103}
-{"input":"sin(45)^2+cos(45)^2","type":"expression","result":"1.000000","success":true,"timestamp":1760517103}
-{"input":"5 – 2 + 6","type":"expression","result":"5.000000","success":true,"timestamp":1760517103}
-{"input":"9 – 3 = 6","type":"expression","result":"9.000000","success":true,"timestamp":1760517103}
-{"input":"1 + 8 = 9	2 + 4 + 1 = 7	8 – 3 – 4 = 1	1 + 7 – 2 = 6","type":"expression","result":"9.000000","success":true,"timestamp":1760517103}
-{"input":"5 – 4 = 1","type":"expression","result":"5.000000","success":true,"timestamp":1760517103}
-{"input":"5*6-10","type":"expression","result":"20.000000","success":true,"timestamp":1760517103}
-{"input":"sqrt(16)+3","type":"expression","result":"7.000000","success":true,"timestamp":1760517103}
-{"input":"problem","type":"error","result":"Hàm không hợp lệ: problem","success":false,"timestamp":1760517103}
-{"input":"29 – 16 + 42","type":"expression","result":"29.000000","success":true,"timestamp":1760517103}
-{"input":"6 + 4","type":"expression","result":"10.000000","success":true,"timestamp":1760517103}
-{"input":"11 + 41 = 50 + 9 = ; 22 + 16 = 31 + 15 = ; 40 + 18 = 63 + 5 = ; 38 + 11 = 44 + 6 = ; 27 + 21 = 21 + 30 =","type":"system_equation","result":"Chức năng hệ PT đang phát triển","success":false,"timestamp":1760517103}
-{"input":"leanip","type":"error","result":"Hàm không hợp lệ: leanip","success":false,"timestamp":1760517369}
-{"input":"learn","type":"error","result":"Hàm không hợp lệ: learn","success":false,"timestamp":1760600875}
-{"input":"claean","type":"error","result":"Hàm không hợp lệ: claean","success":false,"timestamp":1760619661}
-{"input":"healp","type":"error","result":"Hàm không hợp lệ: healp","success":false,"timestamp":1760620516}
-{"input":"ádas","type":"error","result":"Thiếu số","success":false,"timestamp":1760621359}
-{"input":"amalyze","type":"error","result":"Hàm không hợp lệ: amalyze","success":false,"timestamp":1760621383}
-{"input":"23123-123123213=1231231","type":"expression","result":"-123100090.000000","success":true,"timestamp":1760621429}
-{"input":"23123=21321","type":"expression","result":"23123.000000","success":true,"timestamp":1760622021}
-{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623473}
-{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623515}
-{"input":"clear","type":"error","result":"Hàm không hợp lệ: clear","success":false,"timestamp":1760623520}
-{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623536}
-{"input":"1212+x=212","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":1760623541}
-{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":1760623555}
-{"input":"x^2+3x-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":1760624312}
-{"input":"sqrt(16)","type":"expression","result":"4.000000","success":true,"timestamp":1760624321}
+{"input":"2+3","type":"expression","result":"5.000000","success":true,"timestamp":0}
+{"input":"5*6","type":"expression","result":"30.000000","success":true,"timestamp":0}
+{"input":"10-4","type":"expression","result":"6.000000","success":true,"timestamp":0}
+{"input":"20/5","type":"expression","result":"4.000000","success":true,"timestamp":0}
+{"input":"2+3*4","type":"expression","result":"14.000000","success":true,"timestamp":0}
+{"input":"(5+3)*2","type":"expression","result":"16.000000","success":true,"timestamp":0}
+{"input":"10/2+3","type":"expression","result":"8.000000","success":true,"timestamp":0}
+{"input":"2^3","type":"expression","result":"8.000000","success":true,"timestamp":0}
+{"input":"2^8","type":"expression","result":"256.000000","success":true,"timestamp":0}
+{"input":"3^3","type":"expression","result":"27.000000","success":true,"timestamp":0}
+{"input":"5^2","type":"expression","result":"25.000000","success":true,"timestamp":0}
+{"input":"10^3","type":"expression","result":"1000.000000","success":true,"timestamp":0}
+{"input":"sqrt(4)","type":"expression","result":"2.000000","success":true,"timestamp":0}
+{"input":"sqrt(16)","type":"expression","result":"4.000000","success":true,"timestamp":0}
+{"input":"sqrt(25)","type":"expression","result":"5.000000","success":true,"timestamp":0}
+{"input":"sqrt(100)","type":"expression","result":"10.000000","success":true,"timestamp":0}
+{"input":"sin(0)","type":"expression","result":"0.000000","success":true,"timestamp":0}
+{"input":"sin(30)","type":"expression","result":"0.500000","success":true,"timestamp":0}
+{"input":"sin(45)","type":"expression","result":"0.707107","success":true,"timestamp":0}
+{"input":"sin(60)","type":"expression","result":"0.866025","success":true,"timestamp":0}
+{"input":"sin(90)","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"cos(0)","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"cos(30)","type":"expression","result":"0.866025","success":true,"timestamp":0}
+{"input":"cos(45)","type":"expression","result":"0.707107","success":true,"timestamp":0}
+{"input":"cos(60)","type":"expression","result":"0.500000","success":true,"timestamp":0}
+{"input":"cos(90)","type":"expression","result":"0.000000","success":true,"timestamp":0}
+{"input":"log(10)","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"log(100)","type":"expression","result":"2.000000","success":true,"timestamp":0}
+{"input":"log(1000)","type":"expression","result":"3.000000","success":true,"timestamp":0}
+{"input":"ln(e)","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"ln(1)","type":"expression","result":"0.000000","success":true,"timestamp":0}
+{"input":"x+5=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"2x-10=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"3x+9=0","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"5x=20","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"x/2=5","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"x^2-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"x^2-5x+6=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"x^2+2x+1=0","type":"quadratic_equation","result":"Nghiệm kép","success":true,"timestamp":0}
+{"input":"x^2-9=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"2x^2-8=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"x^2-10x+25=0","type":"quadratic_equation","result":"Nghiệm kép","success":true,"timestamp":0}
+{"input":"sin(30)+cos(60)","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"sqrt(16)+log(100)","type":"expression","result":"6.000000","success":true,"timestamp":0}
+{"input":"2^3+3^2","type":"expression","result":"17.000000","success":true,"timestamp":0}
+{"input":"sin(45)^2+cos(45)^2","type":"expression","result":"1.000000","success":true,"timestamp":0}
+{"input":"5 – 2 + 6","type":"expression","result":"5.000000","success":true,"timestamp":0}
+{"input":"9 – 3 = 6","type":"expression","result":"9.000000","success":true,"timestamp":0}
+{"input":"1 + 8 = 9	2 + 4 + 1 = 7	8 – 3 – 4 = 1	1 + 7 – 2 = 6","type":"expression","result":"9.000000","success":true,"timestamp":0}
+{"input":"5 – 4 = 1","type":"expression","result":"5.000000","success":true,"timestamp":0}
+{"input":"5*6-10","type":"expression","result":"20.000000","success":true,"timestamp":0}
+{"input":"sqrt(16)+3","type":"expression","result":"7.000000","success":true,"timestamp":0}
+{"input":"problem","type":"error","result":"Hàm không hợp lệ: problem","success":false,"timestamp":0}
+{"input":"29 – 16 + 42","type":"expression","result":"29.000000","success":true,"timestamp":0}
+{"input":"6 + 4","type":"expression","result":"10.000000","success":true,"timestamp":0}
+{"input":"11 + 41 = 50 + 9 = ; 22 + 16 = 31 + 15 = ; 40 + 18 = 63 + 5 = ; 38 + 11 = 44 + 6 = ; 27 + 21 = 21 + 30 =","type":"system_equation","result":"Chức năng hệ PT đang phát triển","success":false,"timestamp":0}
+{"input":"leanip","type":"error","result":"Hàm không hợp lệ: leanip","success":false,"timestamp":0}
+{"input":"learn","type":"error","result":"Hàm không hợp lệ: learn","success":false,"timestamp":0}
+{"input":"claean","type":"error","result":"Hàm không hợp lệ: claean","success":false,"timestamp":0}
+{"input":"healp","type":"error","result":"Hàm không hợp lệ: healp","success":false,"timestamp":0}
+{"input":"ádas","type":"error","result":"Thiếu số","success":false,"timestamp":0}
+{"input":"amalyze","type":"error","result":"Hàm không hợp lệ: amalyze","success":false,"timestamp":0}
+{"input":"23123-123123213=1231231","type":"expression","result":"-123100090.000000","success":true,"timestamp":0}
+{"input":"23123=21321","type":"expression","result":"23123.000000","success":true,"timestamp":0}
+{"input":"help","type":"error","result":"Hàm không hợp lệ: help","success":false,"timestamp":0}
+{"input":"clear","type":"error","result":"Hàm không hợp lệ: clear","success":false,"timestamp":0}
+{"input":"1212+x=212","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"x^2+3x-4=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"ẽit","type":"error","result":"Thiếu số","success":false,"timestamp":0}
+{"input":"1212-313123","type":"expression","result":"-311911.000000","success":true,"timestamp":0}
+{"input":"ext","type":"error","result":"Hàm không hợp lệ: ext","success":false,"timestamp":0}
+{"input":"rollb","type":"error","result":"Hàm không hợp lệ: rollb","success":false,"timestamp":0}
+{"input":"build","type":"error","result":"Hàm không hợp lệ: build","success":false,"timestamp":0}
+{"input":"3+7","type":"expression","result":"10.000000","success":true,"timestamp":0}
+{"input":"12*4","type":"expression","result":"48.000000","success":true,"timestamp":0}
+{"input":"sqrt(64)","type":"expression","result":"8.000000","success":true,"timestamp":0}
+{"input":"x+3=7","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"2x-5=9","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}
+{"input":"x^2-4x+3=0","type":"quadratic_equation","result":"Có 2 nghiệm phân biệt","success":true,"timestamp":0}
+{"input":"5^3","type":"expression","result":"125.000000","success":true,"timestamp":0}
+{"input":"50-18","type":"expression","result":"32.000000","success":true,"timestamp":0}
+{"input":"5*7","type":"expression","result":"35.000000","success":true,"timestamp":0}
+{"input":"sqrt(144)","type":"expression","result":"12.000000","success":true,"timestamp":0}
+{"input":"100/5","type":"expression","result":"20.000000","success":true,"timestamp":0}
+{"input":"x+5=10","type":"linear_equation","result":"Có 1 nghiệm","success":true,"timestamp":0}

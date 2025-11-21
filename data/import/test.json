@@ -1,0 +1,70 @@
+{
+    "input": "15+25",
+    "type": "expression",
+    "result": "40.000000",
+    "success": true,
+    "timestamp": 1700000001
+}
+{
+    "input": "100-37",
+    "type": "expression",
+    "result": "63.000000",
+    "success": true,
+    "timestamp": 1700000002
+}
+{
+    "input": "8*9",
+    "type": "expression",
+    "result": "72.000000",
+    "success": true,
+    "timestamp": 1700000003
+}
+{
+    "input": "144/12",
+    "type": "expression",
+    "result": "12.000000",
+    "success": true,
+    "timestamp": 1700000004
+}
+{
+    "input": "sqrt(225)",
+    "type": "power",
+    "result": "15.000000",
+    "success": true,
+    "timestamp": 1700000005
+}
+{
+    "input": "x+8=20",
+    "type": "linear_equation",
+    "result": "x = 12.000000",
+    "success": true,
+    "timestamp": 1700000006
+}
+{
+    "input": "3x-6=15",
+    "type": "linear_equation",
+    "result": "x = 7.000000",
+    "success": true,
+    "timestamp": 1700000007
+}
+{
+    "input": "x^2-9=0",
+    "type": "quadratic_equation",
+    "result": "x1 = 3.000000, x2 = -3.000000",
+    "success": true,
+    "timestamp": 1700000008
+}
+{
+    "input": "cos(60)",
+    "type": "trigonometry",
+    "result": "0.500000",
+    "success": true,
+    "timestamp": 1700000009
+}
+{
+    "input": "2^10",
+    "type": "power",
+    "result": "1024.000000",
+    "success": true,
+    "timestamp": 1700000010
+}

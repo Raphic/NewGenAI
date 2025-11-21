@@ -1,0 +1,14 @@
+# Test File - TXT Format
+# Đây là file test cho import TXT
+# Mỗi dòng là 1 bài toán
+
+2+3
+5*7
+sqrt(144)
+10-4
+100/5
+2^8
+sin(90)
+cos(0)
+log(100)
+x+5=10
